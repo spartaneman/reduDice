@@ -8,29 +8,18 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/dice_outcome_textview"
+    <ImageView
+        android:id="@+id/dice_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/default_value"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
+        tools:src="@drawable/dice_1"
+        />
     <Button
         android:id="@+id/roll_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/roll_String"/>
-    <Button
-        android:id="@+id/countUp_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/count_up"/>
 
 </LinearLayout>

@@ -16,27 +16,22 @@ class MainActivity : AppCompatActivity() {
             rollDice()
         }
 
-        binding.countUpButton.setOnClickListener {
-            countUp()
-        }
 
     }
 
     private fun rollDice(){
         val randomInt = (1..6).random()
-        binding.diceOutcomeTextview.text = randomInt.toString()
-    }
-    private fun countUp(){
-        val textInt =binding.diceOutcomeTextview.text.toString().toInt()
-
-        if(textInt == 6)
+        val diceResource = when(randomInt)
         {
-            binding.diceOutcomeTextview.text = textInt.toString()
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
         }
-        else
-        {
-            binding.diceOutcomeTextview.text = "${textInt + 1}"
-        }
+        binding.diceImageView.setImageResource(diceResource)
 
     }
+
 }
